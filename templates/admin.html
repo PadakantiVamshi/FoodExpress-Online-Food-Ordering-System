@@ -1,0 +1,170 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodExpress Admin Dashboard</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f5f7;
+        }
+
+        header {
+            background: #202938;
+            color: white;
+            padding: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .container {
+            padding: 30px;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px #00000012;
+        }
+
+        .card h3 {
+            color: #666;
+        }
+
+        .card h2 {
+            color: #ff5722;
+            font-size: 32px;
+        }
+
+        .table-container {
+            background: white;
+            margin-top: 30px;
+            padding: 25px;
+            border-radius: 12px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: #202938;
+            color: white;
+        }
+
+        select {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            background: #ff5722;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #e64a19;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>🍴 FoodExpress Admin Dashboard</h2>
+        <a href="/">Back to Website</a>
+    </header>
+
+    <div class="container">
+
+        <h1>Dashboard Overview</h1>
+
+        <div class="dashboard">
+
+            <div class="card">
+                <h3>📦 Total Orders</h3>
+                <h2 id="total-orders">--</h2>
+            </div>
+
+            <div class="card">
+                <h3>💰 Total Order Value</h3>
+                <h2 id="total-revenue">--</h2>
+            </div>
+
+            <div class="card">
+                <h3>👥 Total Customers</h3>
+                <h2 id="total-customers">--</h2>
+            </div>
+
+            <div class="card">
+                <h3>⏳ Pending Orders</h3>
+                <h2 id="pending-orders">--</h2>
+            </div>
+
+        </div>
+
+        <div class="table-container">
+
+            <h2>Order Management</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Order Date</th>
+                        <th>Total Amount</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody id="orders-table">
+                    <tr>
+                        <td colspan="6">
+                            Waiting for database connection
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+    <script src="/static/admin.js"></script>
+</body>
+</html>
